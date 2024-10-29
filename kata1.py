@@ -11,7 +11,5 @@ def get_index(numbers, number):
     return -1
 
     
-
-
 print(get_index(numbers, number))
 
