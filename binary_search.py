@@ -1,6 +1,8 @@
+#Программа написана для определения количества необходимых и тераций для поиска числа
 border_min = int(input('Vvedite nizhniy predel poiska: '))
 border_max = int(input('Vvedite verhniy predel poiska: '))
 random_number = int(input('Vvedite chislo dlya poiska: '))
+
 def search_number(min, max, num):
     searcher = (max + min) //2
     count = 0
@@ -16,5 +18,3 @@ def search_number(min, max, num):
 
 
 print(search_number(border_min, border_max, random_number))
-
-
