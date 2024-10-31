@@ -1,6 +1,7 @@
 
+
 def binary_search_iterative(arr, target):
-    pass 
+    return -1
 
 
 def binary_search_recursive(arr, target, left=None, right=None): ...
