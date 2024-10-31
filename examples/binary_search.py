@@ -12,7 +12,12 @@ def search_number(min, max, num):
     return count
 
 
-def binary_search_iterative(arr, target): ...
+def binary_search_iterative(arr, target):
+    pass 
 
 
 def binary_search_recursive(arr, target, left=None, right=None): ...
+
+
+if __name__ == '__main__':
+    print('hello')
