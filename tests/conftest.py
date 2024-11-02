@@ -7,3 +7,10 @@ def integer_search_fixture():
     orthodox_index = 4
     existing_element = numbers[orthodox_index]
     return numbers, existing_element, orthodox_index
+
+@pytest.fixture
+def value_search_fixture():
+    words = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+    orthodox_index = 4
+    existing_element = words[orthodox_index]
+    return words, existing_element, orthodox_index
