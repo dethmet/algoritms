@@ -16,6 +16,12 @@ def binary_search_iterative(arr, target):
 
 
 def binary_search_recursive(arr, target, left=None, right=None):
+
+    if left is None:
+        left = 0
+    if right is None:
+        right = len(arr) - 1
+        
     if left <= right:
         mid = (left + right) // 2
         if target > arr[mid]:
