@@ -30,25 +30,25 @@ def test_binary_search_iterative_not_exists(integer_search_fixture):
     assert binary_search_iterative(numbers, not_exists_element) == -1
 
 
-def test_binary_search_recursive_exists(value_search_fixture):
+def test_binary_search_recursive_exists_by_string(value_search_fixture):
     words, existing_element, orthodox_index = value_search_fixture
     assert binary_search_recursive(words, existing_element) == orthodox_index
     not_exists_element = 'r'
     assert binary_search_recursive(words, not_exists_element) == -1
 
 
-def test_binary_search_recursive_not_exists(value_search_fixture):
+def test_binary_search_recursive_not_exists_by_string(value_search_fixture):
     words, _, _ = value_search_fixture
     not_exists_element = 'r'
     assert binary_search_recursive(words, not_exists_element) == -1
 
 
-def test_binary_search_iterative_exists(value_search_fixture):
+def test_binary_search_iterative_exists_by_string(value_search_fixture):
     words, existing_element, orthodox_index = value_search_fixture
     assert binary_search_iterative(words, existing_element) == orthodox_index
 
 
-def test_binary_search_iterative_not_exists(value_search_fixture):
+def test_binary_search_iterative_not_exists_by_string(value_search_fixture):
     words, _, _ = value_search_fixture
     not_exists_element = 'r'
     assert binary_search_iterative(words, not_exists_element) == -1
