@@ -17,7 +17,7 @@ def binary_search_recursive(arr, target, left=None, right=None):
     if left is None:
         left = 0
     if right is None:
-        right = len(arr)        
+        right = len(arr) - 1
     if left > right:
         return -1
     mid = (left + right) // 2
