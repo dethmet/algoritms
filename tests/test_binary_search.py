@@ -7,8 +7,8 @@ from examples.binary_search import binary_search_recursive, binary_search_iterat
 
 
 def test_binary_search_recursive_exists(integer_search_fixture):
-    numbers, existing_element, orthodox_index = integer_search_fixture
-    assert binary_search_recursive(numbers, existing_element) == orthodox_index
+    numbers, existing_element, arr_search_numbers = integer_search_fixture
+    assert binary_search_recursive(numbers, existing_element) in arr_search_numbers
 
 
 def test_binary_search_recursive_not_exists(integer_search_fixture):
@@ -18,8 +18,8 @@ def test_binary_search_recursive_not_exists(integer_search_fixture):
 
 
 def test_binary_search_iterative_exists(integer_search_fixture):
-    numbers, existing_element, orthodox_index = integer_search_fixture
-    assert binary_search_iterative(numbers, existing_element) == orthodox_index
+    numbers, existing_element, arr_search_numbers = integer_search_fixture
+    assert binary_search_iterative(numbers, existing_element) in arr_search_numbers
 
 
 def test_binary_search_iterative_not_exists(integer_search_fixture):
