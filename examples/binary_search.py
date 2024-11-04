@@ -1,15 +1,14 @@
 def binary_search_iterative(arr, target):
     min_index = 0
     max_index = len(arr) - 1
-    mid_index = len(arr) // 2
-    while min_index <= max_index:        
+    while min_index <= max_index:
+        mid_index = (max_index + min_index) // 2
         if target == arr[mid_index]:
             return mid_index
         elif target > arr[mid_index]:
             min_index = mid_index + 1
         else:
             max_index = mid_index - 1
-        mid_index = (max_index + min_index) // 2
     return -1
 
 

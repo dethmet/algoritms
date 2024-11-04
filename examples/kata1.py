@@ -1,7 +1,7 @@
 def get_index(arr, target):
-    index_target = 0
-    while index_target < (len(arr) - 1):
-        if target == arr[index_target]:
-            return index_target
-        index_target += 1
+    i_target = 0
+    while i_target < (len(arr) - 1):
+        if target == arr[i_target]:
+            return i_target
+        i_target += 1
     return -1
