@@ -1,7 +1,7 @@
-def get_index(numbers, number):
-    index_number = 0
-    while index_number < len(numbers):
-        if number == numbers[index_number]:
-            return index_number
-        index_number += 1
+def get_index(arr, target):
+    i_target = 0
+    while i_target < (len(arr) - 1):
+        if target == arr[i_target]:
+            return i_target
+        i_target += 1
     return -1

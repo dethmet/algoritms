@@ -1,18 +1,28 @@
-def search_number(min, max, num):
-    searcher = (max + min) //2
-    count = 0
-    while num != searcher:
-        if num < searcher:
-            max = searcher
-            searcher = (searcher + min) // 2
+def binary_search_iterative(arr, target):
+    min_index = 0
+    max_index = len(arr) - 1
+    while min_index <= max_index:
+        mid_index = (max_index + min_index) // 2
+        if target < arr[mid_index]:
+            max_index = mid_index - 1
+        elif target > arr[mid_index]:
+            min_index = mid_index + 1
         else:
-            min = searcher
-            searcher = (max + searcher) //2
-        count += 1
-    return count
+            return mid_index
+    return -1
 
 
-def binary_search_iterative(arr, target): ...
-
-
-def binary_search_recursive(arr, target, left=None, right=None): ...
+def binary_search_recursive(arr, target, left=None, right=None):
+    if left is None:
+        left = 0
+    if right is None:
+        right = len(arr) - 1
+    if left > right:
+        return -1
+    mid = (left + right) // 2
+    if target > arr[mid]:
+        return binary_search_recursive(arr, target, mid + 1, right)
+    elif target < arr[mid]:
+        return binary_search_recursive(arr, target, left, mid - 1)
+    return mid
+    
