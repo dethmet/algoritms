@@ -1,5 +1,5 @@
 import random
-from string import ascii_lowercase
+from string import ascii_lowercase, digits
 
 import pytest
 
@@ -19,7 +19,7 @@ def integer_search_fixture():
 
 @pytest.fixture
 def value_search_fixture():
-    words = sorted([''.join(random.choices(ascii_lowercase, k=6)) for i in range(100000)])
+    words = sorted([''.join(random.choices(ascii_lowercase + digits, k=6)) for i in range(100000)])
     orthodox_index = random.randint(0, len(words))
     existing_element = words[orthodox_index]
     return words, existing_element, words.index(existing_element)
