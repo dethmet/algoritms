@@ -46,5 +46,5 @@ def test_binary_search_iterative_exists_by_string(value_search_fixture):
 
 def test_binary_search_iterative_not_exists_by_string(value_search_fixture):
     words, _, _ = value_search_fixture
-    not_exists_element = '999999'
+    not_exists_element = 'A999999'
     assert binary_search_iterative(words, not_exists_element) == -1
